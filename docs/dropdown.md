@@ -35,9 +35,11 @@ No. There isn't a multi select dropdown within the library.
 
 ---
 ### Variants
+
 ## Region Picker
 
 Region picker is a variant of Dropdown menu
+
 ---
 
 ## Is region picker component built w/ icon? There was no icon in Fedstory book.
