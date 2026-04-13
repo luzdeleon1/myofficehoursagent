@@ -1,65 +1,72 @@
-
----
-
-title: Modal – FAQ
-
----
-
 # Modal
 
-Frequently asked questions about the Modal component in the Design System.
+## Pattern Properties
+- Pattern Name: modal-pattern
+- Version: 7.2.4
+- DS1: Yes
+- Vessel: Yes
+- JS Pattern: Yes
+- Dependencies: Dropdown menu, Print Utility, Slider
 
----
+## Installation
 
-## Spacing issues after updating Modal from 5.7.0 version to 6.1.1
-
-**Answer**
-It is necessary to make updates to markup according to 6.1.1 version
-
-
-**Notes**
-Updating package is one step but given the major package update
-
----
-
-## Layout issues in Modal
-
-**Answer**
-Do not implement Legacy Modal.
-
-
-**References**
-https://jira-aes.kp.org/browse/IAM1-26391
-
----
-
-## Two Modal instances used but trigger buttons only open the same Modal Instance.
-
-**Answer**
-Double check that each trigger element's data-modal-trigger attribute points to a unique ID of each Modal
-
-**Example**
-```html
-<!--Buttons-->
-<button class="button" data-modal-trigger="modal-1">Open Modal 1</button>
-<button class="button" data-modal-trigger="modal-2">Open Modal 2</button>
-
-<!--Modals-->
-<div class="ds-modal" id="modal-1"></div>
-<div class="ds-modal" id="modal-2"></div>
+### Prerequisites
+```bash
+npm install styleguide
 ```
 
----
+### Install
+```bash
+npm install modal-pattern
+```
 
-### Variants
-## Full Screen
+### package.json
+```json
+"modal-pattern": "~7.2.1"
+```
 
-Fulll screen is a variant of Modal to display content in a content window that uses full screen width
+## Variants
+- Windowed
+- Fullscreen
 
----
+### Column Options
+- columns-4
+- columns-6
+- columns-8
+- columns-10
 
-## Window Screen
+## Usage
 
-Window screen is the basic variant of Modal to display content in a content window
+### Styling (DS1)
+```scss
+@import 'styleguide/global-main';
+@import 'modal-pattern/modal-ds1';
+```
 
----
+### Styling (Vessel)
+```scss
+@import 'styleguide/styleguide-ds2';
+@import 'modal-pattern/modal';
+```
+
+### Styling (Foundation)
+```scss
+@use 'modal-pattern/modal-foundation';
+```
+
+## HTML Example
+
+```html
+<div class="modal-pattern">
+  <div class="modal-container">
+    <div class="modal-inner" role="dialog">
+      <button class="-close--small"></button>
+    </div>
+  </div>
+</div>
+```
+
+## Accessibility Notes
+- Use `aria-label` or `aria-labelledby`
+- Manage `aria-hidden` state
+- Ensure focus trapping
