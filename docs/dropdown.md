@@ -1,58 +1,24 @@
-
----
-
-title: Dropdown Menu – FAQ
-
----
-
 # Dropdown Menu
 
-Frequently asked questions about the Dropdown Menu component in the Design System.
+## Pattern Properties
+- Pattern Name: drodown-menu-pattern
+- Version: 6.1.0
+- DS1: No
+- Vessel: Yes
+- JS Pattern: Yes
 
----
+## Note
+The Dropdown Menu is a Vessel pattern.  In DS1, for Region/Proxy picker, please use the  Navigational Picker. 
 
-## How to add 2 dropdown-menus on our page where dropdown should show 'Select an option' text on initial load.
+## Overview
+Dropdown Menu component documentation.
 
-**Answer**
-Try adding your default text inside the "drop-down-button-text"
-**Example**
-```html
-<div class="drop-menu-pattern --default" data-menu-type="standard">
-              <div class="drop-menu">
-                <label class="drop-menu-label"></label>
-                <button class="drop-menu-dropdown --no-icon kpPaginationTrigger">
-                  <span class="drop-menu-button-text">Select an option</span>
-                  <img class="drop-down-menu-chevron" src="../_images/chevrondown.svg" alt="">
-                </button>
-                <ul class="drop-menu-list paginationList"></ul>
-              </div>
-            </div>
- ```
----
+## Description
+The dropdown menu provides a selectable list of options triggered by user interaction.
 
-## Do you have a multi-select dropdown component?
+## Usage
+Typically used in navigation, filters, and form selections.
 
-**Answer**
-No. There isn't a multi select dropdown within the library.
-
----
-### Variants
-
-## Region Picker
-
-Region picker is a variant of Dropdown menu
-
----
-
-## Is region picker component built w/ icon? There was no icon in Fedstory book.
-
-**Answer**
-Yes. The Region Picker variant includes an icon that matches the design specifications.
-Although the Fed Storybook demo currently does not display it, the correct icon is `Pincross.svg`.
-
-
-**References**
-https://fed.kp.org/storybook/?path=/story/patterns-dropdown-menu-vessel--dropdown-region&globals=viewer:On
-https://fed.kp.org/storybook/?path=/story/elements-system-icons-ds2--default-system-icons 
-
----
+## Notes
+- Ensure accessibility (ARIA roles, keyboard navigation).
+- Use consistent styling with design system.
