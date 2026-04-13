@@ -1,6 +1,7 @@
 
 ---
 title: Modal – FAQ
+
 ---
 
 # Modal
@@ -53,6 +54,7 @@ Double check that each trigger element's data-modal-trigger attribute points to 
 ## Full Screen
 
 Fulll screen is a variant of Modal to display content in a content window that uses full screen width
+
 ---
 
 ## Window Screen
