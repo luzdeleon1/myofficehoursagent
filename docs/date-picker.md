@@ -1,61 +1,86 @@
-
----
-
-title: Date Picker – FAQ
-
----
-
 # Date Picker
 
-Frequently asked questions about the Date Picker component in the Design System.
+## Pattern Properties
+- Package Name: datepicker-pattern
+- DS1: Yes
+- Vessel: Yes
+- Foundation: Yes
 
----
+## Installation
 
-## Date Picker not prompting date validation upon user interacting with input to type date.
-
-**Answer**
-This is a defect in Date Picker.
-
-**Notes**
-Date Picker by design is expected to prompt validation on Enter key press for Accessibility purposes, as it would be overwhelming non-sighted users that screen readers announce constantly error messages while user still types.
-
----
-
-### Variants
-## Range Picker
-
-Range Picker is a variant of Date Picker to allow user to select from start date to end date.
-
----
-
-## Give an example for Minimum Date and Maximum Date, in the Min date user can select today date and max date can be today +365?
-
-**Answer**
-If you need dynamically generated dates, you will have to calculate them, convert them to datetime strings and assign them as the relevant data attributes before initializing the date picker. 
-
-
-**Example**
-```javascript
-let minDateString = new Date().toISOString(); // current date as string
-let maxDateString = new Date(new Date().getTime() + 365 * 24 * 60 * 60 * 1000).toISOString(), // date 365 days from now as string
+### Prerequisite
+```bash
+npm install styleguide
 ```
 
----
+### Install
+```bash
+npm install datepicker-pattern
+```
 
-## Single Picker
+## Usage
 
-Single Picker is a variant of Date Picker to allow user to select a single date in calendar
+### Styling (DS1)
+```scss
+@import 'styleguide/modern';
+@import 'datepicker-pattern/datepicker-ds1';
+```
 
----
+### Styling (Vessel)
+```scss
+@import 'styleguide/styleguide-ds2';
+@import 'datepicker-pattern/datepicker';
+```
 
-## Helper text in Date Picker is not showing up in Spanish when the user changes the language. It still shows MM/DD/YYYY instead of MM/DD/AAAA. Is this something that's missing from the pattern?
+### Styling (Foundation)
+```scss
+@use 'datepicker-pattern/datepicker-foundation';
+```
 
-**Answer**
-No.
+## HTML Examples
 
-**Notes**
-Date picker has an attribute to sets the language for the build in strings: data-lang. Setting data-lang=”es” in your date picker element before initialization will initialize it using the default Spanish strings.
+### Single Date Picker
+```html
+<div class="date-range-single"></div>
+```
 
-**References**
-https://confluence-aes.kp.org/spaces/DSDOC/pages/535203191/Date+Picker#DatePicker-Javascript
+### With Options
+```html
+<div
+  class="date-range-single"
+  data-default-date="February 15 2024"
+  data-min-date="January 1 2024"
+  data-max-date="December 31 2024"
+></div>
+```
 
+### Vessel Version
+```html
+<div
+  class="ds-datepicker"
+  data-date-selector="single"
+  data-ds-theme="Vessel"
+></div>
+```
+
+## JavaScript
+
+```js
+import { datePickerSingleInit } from 'datepicker-pattern/src/date-picker';
+
+datePickerSingleInit('.date-range-single');
+```
+
+## Events
+- `changeDate` → returns selected date
+
+## Options
+- `lang`
+- `minDate`
+- `maxDate`
+- `defaultDate`
+
+## Notes
+- Defaults to English
+- Supports Spanish (`lang: "ES"`)
+- Inline errors handled automatically
