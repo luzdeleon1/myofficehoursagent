@@ -1,6 +1,8 @@
 
 ---
+
 title: Date Picker – FAQ
+
 ---
 
 # Date Picker
@@ -23,6 +25,7 @@ Date Picker by design is expected to prompt validation on Enter key press for Ac
 ## Range Picker
 
 Range Picker is a variant of Date Picker to allow user to select from start date to end date.
+
 ---
 
 ## Give an example for Minimum Date and Maximum Date, in the Min date user can select today date and max date can be today +365?
