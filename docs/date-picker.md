@@ -47,6 +47,7 @@ let maxDateString = new Date(new Date().getTime() + 365 * 24 * 60 * 60 * 1000).t
 Single Picker is a variant of Date Picker to allow user to select a single date in calendar
 
 ---
+
 ## Helper text in Date Picker is not showing up in Spanish when the user changes the language. It still shows MM/DD/YYYY instead of MM/DD/AAAA. Is this something that's missing from the pattern?
 
 **Answer**
@@ -57,3 +58,4 @@ Date picker has an attribute to sets the language for the build in strings: data
 
 **References**
 https://confluence-aes.kp.org/spaces/DSDOC/pages/535203191/Date+Picker#DatePicker-Javascript
+
